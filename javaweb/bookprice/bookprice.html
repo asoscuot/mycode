@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Book Prices Calculator</title>
+    <script>
+        function calculatePrices() {
+            var prices = [];
+            var sum = 0;
+            var maxPrice = 0;
+            var minPrice = Infinity;
+
+            // Retrieve book prices from input fields
+            for (var i = 1; i <= 10; i++) {
+                var price = parseFloat(document.getElementById("book" + i).value);
+                prices.push(price);
+                sum += price;
+
+                // Update maximum and minimum prices
+                if (price > maxPrice) {
+                    maxPrice = price;
+                }
+                if (price < minPrice) {
+                    minPrice = price;
+                }
+            }
+
+            // Calculate average price
+            var averagePrice = sum / prices.length;
+
+            // Display results
+            document.getElementById("maxPrice").textContent = "最大价格: " + maxPrice;
+            document.getElementById("minPrice").textContent = "最低价格: " + minPrice;
+            document.getElementById("averagePrice").textContent = "平均价格： " + averagePrice.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+<h2>帮你计算书的各种价格</h2>
+<!-- Input fields for book prices -->
+<!-- Input fields for book prices -->
+<label for="book1">书本1的价格:</label>
+<input type="number" id="book1"><br>
+
+<label for="book2">书本2的价格:</label>
+<input type="number" id="book2"><br>
+
+<label for="book3">书本3的价格:</label>
+<input type="number" id="book3"><br>
+
+<label for="book4">书本4的价格:</label>
+<input type="number" id="book4"><br>
+
+<label for="book5">书本5的价格:</label>
+<input type="number" id="book5"><br>
+
+<label for="book6">书本6的价格:</label>
+<input type="number" id="book6"><br>
+
+<label for="book7">书本7的价格</label>
+<input type="number" id="book7"><br>
+
+<label for="book8">书本8的价格</label>
+<input type="number" id="book8"><br>
+
+<label for="book9">书本9的价格</label>
+<input type="number" id="book9"><br>
+
+<label for="book10">书本10的价格</label>
+<input type="number" id="book10"><br>
+
+
+
+<!-- Repeat the above two lines for book3 to book10 -->
+
+<br>
+<button onclick="calculatePrices()">点击帮你计算价格</button>
+
+<!-- Display results here -->
+<p id="maxPrice"></p >
+<p id="minPrice"></p >
+<p id="averagePrice"></p >
+</body>
+</html>

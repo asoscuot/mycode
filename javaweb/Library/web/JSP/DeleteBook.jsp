@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: lenovo
-  Date: 2023/11/29
-  Time: 19:09
+  Date: 2023/11/30
+  Time: 18:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,10 +12,10 @@
 </head>
 <body>
 <%
-    String userID = request.getParameter("userID");
+    String BookID = request.getParameter("BookID");
 %>
-<form action="DeleteHandle.jsp" method="post" id="deleteForm">
-    <input type="hidden" name="userID" value="<%= userID%>">
+<form action="DeleteBookHandle.jsp" method="post" id="deleteForm">
+    <input type="hidden" name="BookID" value="<%=BookID%>">
 
 </form>
 <script>
@@ -24,10 +24,10 @@
         alert("删除成功！");
 
         document.getElementById("deleteForm").submit();
-       // window.document.location.href = "ChangeRegister.jsp";
+        // window.document.location.href = "ChangeRegister.jsp";
 
     }else{
-        window.document.location.href = "ChangeRegister.jsp";
+        window.document.location.href = "ChangeBook.jsp";
     }
 </script>
 </body>

@@ -28,6 +28,7 @@
     <form>
         <li><a href="ChangeRegister.jsp">老子要看看哪些人注册了这个nt系统</a></li>
         <li><a href="ChangeBook.jsp">闲的无聊修改一下图书</a></li>
+        <li><a href="Boom.jsp">毁灭图书馆</a></li>
     </form>
 </div>
 </body>
